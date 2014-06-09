@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+	<bean id="cookbook" class="com.namoo.hellomvc.cookbook.Cookbook">
+		<property name="writer" value="정효진" />
+		<property name="chapters">
+			<list>
+				<value>김치찌개</value>
+				<value>된장찌개</value>
+				<value>페퍼로니 피자</value>
+				<value>양념치킨</value>
+			</list>
+		</property>
+	
+		<property name="recipeMap">
+			<map>
+				<entry key="김치찌개" value-ref="gimchiRecipe"></entry>
+				<entry key="된장찌개" value-ref="donjangRecipe"></entry>
+				<entry key="페퍼로니 피자" value-ref="pizzaRecipe"></entry>
+				<entry key="양념치킨" value-ref="chickenRecipe"></entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="gimchiRecipe" class="com.namoo.hellomvc.cookbook.Gimchi">
+		<constructor-arg value="김치찌개" />
+	</bean>
+	<bean id="donjangRecipe" class="com.namoo.hellomvc.cookbook.Donjang">
+		<constructor-arg value="된장찌개" />
+	</bean>
+	<bean id="pizzaRecipe" class="com.namoo.hellomvc.cookbook.Pizza">
+		<constructor-arg value="페퍼로니 피자" />
+	</bean>
+	<bean id="chickenRecipe" class="com.namoo.hellomvc.cookbook.Chicken">
+		<constructor-arg value="양념치킨" />
+	</bean>
+</beans>
