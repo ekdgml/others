@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO: input 태그의 type이 checkBox인 엘리먼트들을 탐색하면서
+    	// name이 checkedFalse이고 check가 되있으면 check를 해제
+    	$("input:checkBox").each(function(){
+    		if ($(this).is("[name=checkedFalse]")) {
+    			$(this).removeAttr("checked");
+    		};
+    	});
+    //$("input[name='checkedFalse']").removeAttr("checked");
+    }); 
+    
+</script>
+</head>
+ 
+<body>
+    <h3><input type="checkBox" name="checkedFalse" checked="checked"/>체크박스1</h3>
+    <h3><input type="checkBox" checked="checked"/>체크박스2</h3>
+    <h3><input type="checkBox" checked="checked"/>체크박스3</h3>
+</body>
+</html>

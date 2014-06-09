@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO: divArea 하위의 모든 태그들을 복사하여 divArea 하위에 붙여넣는다.
+    	// divArea 하위의 모든 텍스트를 복사하여 divArea 하위에 붙여넣는다.
+    	var html = $("#divArea").html();
+  	    $("#divArea").append(html);
+    	var text = $("#divArea").text();
+    	$("#divArea").append(text);
+    	//(text).appendTo($("#divArea"));
+    });
+</script>
+</head>
+ 
+<body>
+	<div id="divArea">
+		텍스트박스 : <input type="text" value="textBox"/><br/>
+		<span>spanTag</span><br/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.namoo.mybatis.mapper.ArticleMapper">
+
+	<insert id="insertArticle" parameterType="Article" useGeneratedKeys="true" keyProperty="no">
+		INSERT INTO article_tb (
+		subject
+		, contents
+		) VALUES (
+		#{subject}
+		, #{contents}
+		)
+	</insert>
+	
+	<select id="selectArticle" parameterType="int" resultType="Article">
+		SELECT 
+			article_no as no
+			, subject
+			, contents
+		FROM article_tb
+		WHERE article_no = #{no}
+	</select>
+	
+</mapper>

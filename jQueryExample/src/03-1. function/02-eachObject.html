@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+    .high-light-0 { background: yellow; }
+    .high-light-1 { background: orange; }
+    .high-light-2 { background: blue; }
+    .high-light-3 { background: green; }
+    .high-light-4 { background: red; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	// TODO : h2 태그마다 high-light-0~4 클래스를 주어 CSS 적용
+    	$("h2").each(function(index, item){
+    		$(item).addClass("high-light-"+index);
+    	});
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>첫번째</h2>
+    <h2>두번째</h2>
+    <h2>세번째</h2>
+    <h2>네번째</h2>
+    <h2>다섯번째</h2>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// first() 함수를 사용하여 첫번째 h2 태그 색상 변경
+    	// last() 함수를 사용하여 마지막 h2 태그 색상 변경
+    	// eq() 함수를 사용하여 세번째 h2 태그 색상 변경
+    	$("h2").filter(":first").css("background-color", "blue").css("color", "white")
+    	.end().eq(2).css("background-color", "silver")
+    	.end().last().css("background-color", "black").css("color", "white");
+    	
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>첫번째</h2>
+    <h2>두번째</h2>
+    <h2>세번째</h2>
+    <h2>네번째</h2>
+    <h2>다섯번째</h2>
+    <h2>여섯번째</h2>
+</body>
+</html>

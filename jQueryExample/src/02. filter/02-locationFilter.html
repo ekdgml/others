@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	/*순서주의!*/
+	$("tr:odd").css("background-color", "white");
+	$("tr:even").css("background-color", "silver");
+	$("tr:first").css("background-color", "black").css("color", "white");
+});
+
+</script>
+</head>
+<body>
+
+<h2>jQuery 필터 셀렉터</h2>
+<p>jQuery 필터 셀렉터의 종류를 나열하였습니다.</p>
+<div>
+    <table>
+        <tr><th>이름</th>
+            <th>표현식</th>
+            <th>설명</th>
+        </tr>
+        <tr><td>button 필터</td>
+            <td>:button</td>
+            <td>모든 버튼 선택</td>
+        </tr>
+        <tr><td>checkbox 필터</td>
+            <td>:checkbox</td>
+            <td>체크박스 엘리먼트 선택</td>
+        </tr>
+        <tr><td>체크상태 필터</td>
+            <td>:checked</td>
+            <td>선택된 체크박스</td>
+        </tr>
+        <tr><td>비활성화 필터</td>
+            <td>:disabled</td>
+            <td>비활성화 엘리먼트 선택</td>
+        </tr>
+        <tr><td>활성화 필터</td>
+            <td>:enabled</td>
+            <td>활성화 엘리먼트 선택</td>
+        </tr>
+        <tr><td>파일 필터</td>
+            <td>:file</td>
+            <td>파일 엘리먼트 선택</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

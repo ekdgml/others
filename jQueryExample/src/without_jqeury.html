@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.onload = function() {
+	var btn = document.getElementsByTagName("button")[0];
+	btn.addEventListener("click", function() { 
+		//
+		var elems = document.getElementsByTagName("p");
+		for (var i = 0, length=elems.length; i < length; i++) {
+			elems[i].style.display = "none";
+		}
+	});
+};
+
+</script>
+</head>
+<body>
+
+<h2>이것은 제목입니다.</h2>
+<p>이것은 단락입니다.</p>
+<p>이것든 또 다른 단락입니다.</p>
+
+<button>버튼</button>
+</body>
+</html>

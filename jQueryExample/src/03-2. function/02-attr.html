@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO 1: img태그 객체배열에 직접 attr을 사용하여 src 속성값을 메세지창으로 띄움
+    	// img태그 객체배열에서 각 객체를 탐색하며 해당 객체의 src 속성값을 메세지 창으로 띄움
+    	
+    	// TODO 2: 모든 img 태그의 가로사이즈(width)를 200으로 변경
+
+    	// TOD 3: 각 img 태그의 가로사이즈를 함수로 계산하여 100, 200, 300, 400으로 변경
+    	$("img").each(function(index, item){
+    		//1.
+    		alert($(item).attr("src"));
+    	   //2.$(item).attr("width", "200");
+    	   //3.
+    		$(item).css("width", 100*(index+1));
+    	});
+    });
+</script>
+</head>
+ 
+<body>
+    <img src="img/Koala.jpg" width="400"/>
+    <img src="img/Desert.jpg" width="400"/>
+    <img src="img/Lighthouse.jpg" width="400"/>
+    <img src="img/Penguins.jpg" width="400"/>
+</body>
+</html>

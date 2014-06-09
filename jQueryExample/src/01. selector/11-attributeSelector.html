@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+	$("#button1").click(function(){
+		$("#targets > input[name]").css("background-color", "silver");
+	});
+	$("#button2").click(function() {
+		$("#targets > input[value='jQuery']").css("background-color", "silver");
+	});
+	$("#button3").click(function() {
+		$("#targets > input[value!='jQuery']").css("background-color", "silver");
+	});
+	$("#button4").click(function() {
+		$("#targets > input[value~='셀렉터']").css("background-color", "silver");
+	});
+	$("#button5").click(function() {
+		$("#targets > input[value*='셀렉터']").css("background-color", "silver");
+	});
+	$("#button6").click(function() {
+		$("#targets > input[value^='셀렉터']").css("background-color", "silver");
+	});
+	$("#button7").click(function() {
+		$("#targets > input[value$='셀렉터']").css("background-color", "silver");
+	});
+	$("#btn_clear").click(function() {
+		$("#targets > input").css("background-color", "white");
+	});
+	
+});
+
+</script>
+</head>
+<body>
+	<h2>jQuery Attribute 셀렉터</h2>
+	<p>jQuery Attribute 셀렉터 테스트</p>
+	<div id="targets">
+	    <input type="text" name="case1" value="jQuery"/><br/>
+	    <input type="text" name="case2" value="jQuery 셀렉터"/><br/>
+	    <input type="text" name="case3" value="jQuery 셀렉터 테스트"/><br/>
+	    <input type="text" name="case4" value="셀렉터 테스트"/><br/>
+	    <input type="text" name="case5" value="셀렉터테스트"/><br/>
+	    <input type="text" name="case6" value="테스트"/><br/>
+	</div>
+	<div>
+	    <input type="button" id="button1" value="name속성을 가짐"/>
+	    <input type="button" id="button2" value="'jQuery' 일치"/>
+	    <input type="button" id="button3" value="'jQuery' 미일치"/>
+	    <input type="button" id="button4" value="'셀렉터' 단어 포함"/>
+	    <input type="button" id="button5" value="'셀렉터' 포함"/>
+	    <input type="button" id="button6" value="'셀렉터'로 시작"/>
+	    <input type="button" id="button7" value="'셀렉터'로 끝남"/>
+	    <input type="button" id="btn_clear" value="clear"/>
+	</div>
+</body>
+</html>

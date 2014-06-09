@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#button1").click(function() {
+		alert($("select > option:selected").val());
+	});
+});
+
+</script>
+</head>
+<body>
+
+<h2>jQuery 필터 셀렉터</h2>
+<p>jQuery 필터 셀렉터 테스트</p>
+<div>
+    <select>
+        <option>Element 셀렉터</option>
+        <option>Attribute 셀렉터</option>
+        <option>Adjacent 셀렉터</option>
+        <option>Descendant 셀렉터</option>
+        <option>Multiple 셀렉터</option>
+    </select>
+</div>
+<div>
+    <input type="button" id="button1" value="선택 보기"/>
+</div>
+
+
+</body>
+</html>

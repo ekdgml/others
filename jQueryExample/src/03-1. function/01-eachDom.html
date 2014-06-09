@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+	var array = [
+	    { name:'KOSTA', link:'http://edu.kosta.or.kr' },
+	    { name:'Nextree', link:'http://www.nextree.co.kr' },
+	    { name:'Google', link:'http://www.google.co.kr' },
+	    { name:'Daum', link:'http://daum.net' }
+	];
+	
+	var outHtml = '';
+	
+	//1. for문으로 배열요소 반복
+/*	for (var i = 0, length = array.length; i < length; i++) {
+		//
+		//	<a href="http://edu.kosta.or.kr">KOSTA</a>
+		outHtml += '<p><a href="' + array[i].link + '>"' + array[i].name + '</a></p>'
+	}*/
+	
+	//2. array 배열을 each문으로 탐색하며 outHtml 생성
+	$.each(array, function(index, item){
+		//outHtml += '<p><a href="' + item.link + '>"' + item.name + '</a></p>';
+		//outHtml += '<p><a href="' + array[index].link + '>"' + array[index].name + '</a></p>'
+		outHtml += '<p><a href="' + this.link + '">' + this.name + '</a></p>'
+	});
+		
+	document.body.innerHTML = outHtml;
+});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("a").click(function (event){
+            alert("a click!");
+            // a 링크 고유기능이 사라짐
+       	    //event.preventDefault();
+            // h2 이벤트 전달이 사라짐
+            //event.stopPropagation();
+            return false; //두가지 다 실행시키고 싶을 경우
+        });
+        $("h2").click(function(){
+            alert("h2 click!");
+        });
+    });
+</script>
+</head>
+
+<body>
+	<h2><a href="http://edu.kosta.or.kr">KOSTA</a></h2>
+
+</body>
+</html>

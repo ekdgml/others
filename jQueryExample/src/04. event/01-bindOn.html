@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#append").click(function () {
+        $("<p>새로운 단락</p>").appendTo("#div1");
+    });
+    $("#append2").click(function () {
+        $("<p>새로운 단락</p>").appendTo("#div2");
+    });
+    
+    $("#on").click(function(){
+    	// div1에 delegate 방식으로 on 메서드를 사용하여 click 이벤트 바인딩
+    	// 모든 <p> 태그에 대해 클릭시 글자 색상을 빨강으로 
+   		$("#div1").on("click", "p", "hello", function(event) {
+   			alert(event.data);
+   			$(this).css("color", "red");
+   		});
+    });
+    
+    $("#bind").click(function () {
+    	// bind 메서드를 사용하여 click 이벤트 바인딩
+    	// 모든 <p> 태그에 대해 클릭시  글자 색상을 빨강으로 
+    	$("p").bind("click", null, "hello", function(event){
+    		alert(event.data);
+    		$(this).css("color", "red");
+    	});
+    });
+    
+    $("#off").click(function () {
+    	// 모든 <p> 태그의 클릭 이벤트 해제
+    	$("#div1").off("click", "p"); //delegate방식 해제
+    	$("p").off("click"); //bind방식 해제
+    });
+});
+</script>
+</head>
+<body>
+    <div id="div1">
+        <h2>이 부분은 div1입니다.</h2 >
+        <button id="on">on</button><br/>
+        <button id="bind">bind</button><br/>
+        <button id="off">off</button><br/>
+        <button id="append">append to div1</button><br/>
+        <button id="append2">append to div2</button><br/>
+        <p>이 부분은 단락입니다.</p>
+        <p>이 부분은 또다른 단락입니다.</p>
+    </div>
+    <hr/>
+    <div id="div2">
+        <h2>이 부분은 div2입니다.</h2>
+    </div>
+</body>
+</html>

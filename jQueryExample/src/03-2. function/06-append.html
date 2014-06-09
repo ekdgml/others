@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	var option1 = "<option>첫번째</option>",
+    		option2 = "<option>두번째</option>",
+    		option3 = "<option>세번째</option>",
+    		option4 = "<option>네번째</option>",
+    		textBox = "<input type='text' value='텍스트박스'/>";
+		// TODO : 위의 3개 옵션을 셀렉트박스1에 추가
+		$("#selectBox").append(option1, option2, option3);
+        // TODO : option4를 모든 셀렉트박스에 추가
+        $("select").append(option4);
+        // TODO: 텍스트박스를 두개의 셀렉트 박스 사이에 추가  
+        $("#selectBox").after(textBox);
+    });
+</script>
+</head>
+ 
+<body>
+	셀렉트박스1: <select id="selectBox">
+	</select>
+	셀렉트박스2: <select></select>
+</body>
+</html>

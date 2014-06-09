@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	var count = 0;
+    	
+    	$(window).scroll(function () { 
+    		var scrollHeight = $(window).scrollTop() + $(window).height(); 
+    		var documentHeight = $(document).height(); //마지막스크롤위치
+    		if (scrollHeight == documentHeight) { 
+    			for (var i = 0; i < 10; i++) { 
+    				$("<h2>무한 스크롤 " + count++ + "</h2>").appendTo("body"); 
+    			}
+    		} 
+    	});
+    	
+    	for (var i = 0; i < 30; i++) { 
+    		$("<h2>무한 스크롤 " + count++ + "</h2>").appendTo("body"); 
+    	}
+    });
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+

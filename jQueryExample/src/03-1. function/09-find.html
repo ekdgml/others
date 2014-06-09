@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO : id가 findArea인 태그에서 자손의 태그 중 class가 myClass인 
+    	// 태그들의 background를 silver로 변경
+    	$("#findArea").find(".myClass").css("background-color", "silver");
+    });
+</script>
+</head>
+ 
+<body>
+	<div id="findArea">
+	    <h1>첫번째</h1>
+	    <h2 class="myClass">두번째</h2>
+	    <h3 class="myClass">세번째</h3>
+	    <h4>네번째</h4>
+	    <div><h4 class="myClass">div 태그안</h4></div>
+    </div>
+</body>
+</html>

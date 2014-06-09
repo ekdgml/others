@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+	$("#firstTr ~ tr > td").css("border", "1px solid blue");
+});
+
+</script>
+</head>
+<body>
+
+<h2>jQuery 셀렉터</h2>
+<p>jQuery 셀렉터의 종류를 나열하였습니다.</p>
+<p>자세한 내용은 jquery.com 을 확인하세요</p>
+<div>
+    <div>
+        <h2>DOM Element 탐색 셀렉터</h2>
+        <p>DOM Element 셀렉터에 대하여 알아보자</p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>표현식</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="firstTr">
+                <td>Element 셀렉터</td>
+                <td><pre>$("elementName")</pre></td>
+                <td>태그명이 일치하는 Element를 찾는다.</td>
+            </tr>
+            <tr>
+                <td>ID 셀렉터</td>
+                <td><pre>$("#ID")</pre></td>
+                <td>ID가 일치하는 Element를 찾는다.</td>
+            </tr>
+            <tr>
+                <td>Class 셀렉터</td>
+                <td><pre>$(".className")</pre></td>
+                <td>class가 일치하는 Element를 찾는다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

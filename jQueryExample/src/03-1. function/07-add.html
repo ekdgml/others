@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO : h2 엘리먼트에 background를 gray로 변경한 후  
+    	// add() 메서드로 p 엘리먼트를 추가하여 전체 color를 blue로 변경
+    	$("h2").css("background-color", "gray").add("p").css("color", "blue");
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>여기는 헤더 영역입니다.</h2>
+    <p>여기는 p 단락입니다.</p>
+    <p>여기도 p 단락입니다.</p>
+</body>
+</html>

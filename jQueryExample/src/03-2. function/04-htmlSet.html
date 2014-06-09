@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	var html = "<h2>첫번째</h2>";
+        html += "<h2>두번째</h2>";
+        html += "<h2>세번째</h2>";
+        html += "<h2>네번째</h2>";
+        
+        // TODO: 위의 html을 클래스가 htmlClass인 div 태그에 html로 넣고
+        // 클래스가 textClass인 div 태그에는 text로 넣는다.
+        
+        $(".htmlClass").html(html);
+        $(".textClass").text(html);
+    });
+</script>
+</head>
+ 
+<body>
+	<div class="htmlClass">
+    </div>
+    <div class="textClass">
+    </div>
+</body>
+</html>

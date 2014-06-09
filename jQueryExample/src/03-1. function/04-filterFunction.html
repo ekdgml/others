@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// 필터 Selector 적용이 어려운 경우
+    	// TODO: 3n번째 h2 엘리먼트에 CSS 색상 적용
+    	// 0, 3, 6 ...
+    	$("h2").filter(":nth-child(3n-2)").css("background","black").css("color", "white");
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>첫번째</h2>
+    <h2>두번째</h2>
+    <h2>세번째</h2>
+    <h2>네번째</h2>
+    <h2>다섯번째</h2>
+    <h2>여섯번째</h2>
+</body>
+</html>

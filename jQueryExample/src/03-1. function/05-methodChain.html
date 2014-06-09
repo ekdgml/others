@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// 필터 Selector 적용한 경우
+        /*
+        $("h2").css("background", "silver");
+        $("h2:even").css("color", "white");
+        $("h2:odd").css("color", "red");
+        */
+        // 메소드 체인 적용
+        // TODO : 위의 내용을 filter 메서드 사용하여 구현
+    	$("h2").css("background", "silver").filter(":even").css("color", "white")
+        .end().filter(":nth-child(2n)").css("color", "red");
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>첫번째</h2>
+    <h2>두번째</h2>
+    <h2>세번째</h2>
+    <h2>네번째</h2>
+    <h2>다섯번째</h2>
+    <h2>여섯번째</h2>
+</body>
+</html>

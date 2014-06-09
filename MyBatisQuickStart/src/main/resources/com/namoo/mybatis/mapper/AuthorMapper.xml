@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.namoo.mybatis.mapper.AuthorMapper">
+
+	<resultMap type="Author" id="result-author">
+		<id     property="id"    column="author_id" javaType="string" />
+		<result property="name"  column="name"      javaType="string"/>
+		<result property="email" column="email"     javaType="string"/>
+	</resultMap>
+
+	<sql id="author_columns">
+		author_id, 
+		author_nm AS name, 
+		author_email AS email 
+	</sql>
+	
+	<select id="selectAuthor" parameterType="string" resultMap="result-author">
+		SELECT 
+			<include refid="author_columns"/>
+		FROM author_tb
+		WHERE author_id = #{authorId}
+	</select>
+	
+	<select id="selectAllAuthors" flushCache="false" resultMap="result-author">
+		SELECT 
+			<include refid="author_columns"/>
+		FROM author_tb
+	</select>
+	
+	<insert id="insertAuthor" parameterType="Author">
+		INSERT INTO author_tb(
+		author_id
+		, author_nm
+		, author_email
+		) VALUES (
+		#{id}
+		, #{name}
+		, #{email}
+		)
+	</insert>
+	
+	<update id="updateAuthor" parameterType="Author">
+		UPDATE author_tb 
+		SET author_nm = #{name}
+		, author_email = #{email}
+		WHERE author_id = #{id}
+	</update>
+	
+<!-- 	<delete id="deleteAuthor" parameterType="string"> -->
+<!-- 		DELETE FROM author_tb WHERE author_id = #{authorId} -->
+<!-- 	</delete> -->
+</mapper>

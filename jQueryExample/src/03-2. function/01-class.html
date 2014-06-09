@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+    .orange { color: orange; }
+    .blue { color: blue; }
+    .red { color: red; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO : id가 red인 DOM 엘리먼트의 클래스를 orange로
+    	// name이 blue이고 h3인 엘리먼트의 클래스를 blue로 변경
+    	// class가 red인 엘리먼트의 클래스 제거
+    	// h1 태그를 클릭할 때마다 글자의 색상이 black과 red로 반복 변경 (toggleClass)
+        //toggleClass=> 없어졋다가 생겻다가!!!(default color is black)
+    $("#red").addClass("orange");
+    $("h3[name=blue]").addClass("blue");
+    $(".red").removeClass("red");
+    $("h1").click(function(){ 
+    	$(this).toggleClass("red");
+    	});
+    });
+</script>
+</head>
+ 
+<body>
+    <h1>첫번째</h1>
+    <h2 id="red">두번째</h2>
+    <h3 name="blue">세번째</h3>
+    <h4 class="red">네번째</h4>
+</body>
+</html>

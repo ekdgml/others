@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	// TODO: 모든 <h2> 태그에 click 이벤트 바인딩
+    	// click 이벤트가 발생되면 해당 태그 뒤에 별표(*)를 붙임 
+        $("h2").click(function(){
+        	$(this).append("★");
+        });
+       	// TODO : h2 태그중 맨 처음에 위치한 태그의 클릭 이벤트를 강제 발생
+       setInterval(function(){
+    	   $("h2").first().trigger("click");
+       }, 1000);
+    });
+</script>
+</head>
+ 
+<body>
+    <h2>첫번째</h2>
+    <h2>두번째</h2>
+    <h2>세번째</h2>
+</body>
+</html>

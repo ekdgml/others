@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// 두번째 H2 삭제 이벤트
+    	$("#btn1").click(function () {
+    		// TODO: h2 두번째 태그를 삭제하세요
+    		$("#second").remove();
+        });
+    	// div 전체를 비우는 이벤트
+        $("#btn2").click(function () {
+        	// TODO: div 태그의 모든 하위 태그들을 삭제하세요
+        	$("div").empty();
+        });
+    });
+</script>
+</head>
+ 
+<body>
+	<div>
+        <h2>첫번째</h2>
+        <h2 id="second">두번째</h2>
+        <h2>세번째</h2>
+    </div>
+    <input type="button" id="btn1" value="두번째 H2 삭제"/>
+    <input type="button" id="btn2" value="div 비움"/>
+</body>
+</html>

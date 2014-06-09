@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO: textArea 태그에 키보드가 올라왔을 때 발생이벤트 바인딩
+    	// 이벤트 내용은 textArea 안의 글자수를 계산하여 출력한다.
+    	$("textarea").keyup(function(event){
+    		var text = $(this).val().length;
+    		$("h2").text(200-text);
+    		
+    	});
+    });
+</script>
+</head>
+
+<body>
+	<div> 
+		<p>메모장</p>
+		<h2>200</h2>
+		<textarea rows="6" cols="70"></textarea>
+	</div>
+</body>
+</html>
+
+
+

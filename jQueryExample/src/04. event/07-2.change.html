@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	div {
+		width: 500px; height: 500px;
+		background-color: orange;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	// TODO: textArea의 텍스트가 변경되면 내용을
+    	// divArea에 넣는다.
+    	$("#textArea").change(function(){
+    		var text = $(this).val();
+    		$("#divArea").append(text);
+    	});
+    });
+</script>
+</head>
+
+<body>
+	<h5>입력 : </h5>
+	<textarea id="textArea" rows="5" cols="68"></textarea>
+	<hr/>
+	<div id="divArea">
+	</div>
+</body>
+</html>
