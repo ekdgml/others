@@ -1,0 +1,11 @@
+<dataset>
+
+	<user user_id="hyunohkim" user_nm="김현오" email="hyunohkim@nextree.co.kr" />
+	<user user_id="hong"      user_nm="홍길동" email="hong@nextree.co.kr" />
+	
+	<blog blog_id="1" blog_nm="김기사의 블로그" user_id="hyunohkim" />
+	<!-- blog_id 자동생성 테스트를 위해 blog_id 생략함. blog_id 는 2가 되어야 함 -->
+	<blog blog_id="2" blog_nm="코스타 블로그"   user_id="hong" />
+	
+
+</dataset>

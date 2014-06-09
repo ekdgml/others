@@ -1,0 +1,12 @@
+<dataset>
+
+	<user user_id="hyunohkim" user_nm="김현오" email="hyunohkim@nextree.co.kr" />
+	<user user_id="hong"      user_nm="홍길동" email="hong@nextree.co.kr" />
+	
+	<blog blog_id="1" blog_nm="김기사의 블로그" user_id="hyunohkim" />
+	<blog blog_id="2" blog_nm="코스타 블로그"   user_id="hong" />
+	
+	<post post_id="1" subject="첫 포스팅입니다." contents="내용!!" blog_id="1" />
+	<post post_id="2" subject="DB 단위 테스트" contents="DBUnit + H2" blog_id="1" />
+
+</dataset>
